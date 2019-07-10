@@ -22,6 +22,11 @@ Controller.prototype.TargetDirectoryPageCallback = function()
 }
 
 Controller.prototype.ComponentSelectionPageCallback = function() {
+    var page = gui.currentPageWidget();
+
+    page.deselectAll();
+    page.selectComponent("com.adacore.gnat");
+    page.selectComponent("com.adacore.spark2014_discovery");
     gui.clickButton(buttons.NextButton);
 }
 
